@@ -1,4 +1,11 @@
 import Card from './Card';
+import styled from 'styled-components'
+
+
+const DivPersonajes = styled.div`
+   display: flex;
+`
+
 
 export default function Cards(props) {
    const { characters } = props;
@@ -9,7 +16,7 @@ export default function Cards(props) {
                                                          image={personaje.image}>
                                                    </Card> )
    return(
-   <div>
-      {personajes}
-   </div>);
+      <DivPersonajes>
+         {personajes}
+      </DivPersonajes>);
 }
