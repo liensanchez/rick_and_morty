@@ -6,15 +6,20 @@ import { useState } from 'react'
 
 function App () {
 
-  const [characters, setCharacters] = useState({
-    characterName : ''
-  })
+    /*   const [characters, setCharacters] = useState({
+      
+      }) */
 
-  const onSearch = (e) => {
-
-    setCharacters({
-      ...characters,
-    })
+  const onSearch = (character) => {
+    fetch(`https://rickandmortyapi.com/api/character/${character}`)
+    .then((response) => response.json())
+    .then((data) => {
+       if (data.name) {
+          setCharacters((oldChars) => [...oldChars, data]);
+       } else {
+          window.alert('No hay personajes con ese ID');
+       }
+    });
   }
 
 
@@ -25,9 +30,9 @@ function App () {
     </Nav>
     <div className='App' style={{ padding: '25px' }}>   
       <div>
-        <Cards
+         <Cards
           characters={characters}
-        />
+        /> 
       </div>
     </div>
     </>

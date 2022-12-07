@@ -9,7 +9,7 @@ const SearchBarContainer= styled.div`
 export default function SearchBar(props) {
   return (
     <SearchBarContainer>
-      <input type='search' />
+      <input type='search' onChange={} />
       <button  onClick={props.onSearch}> Agregar </button> 
     </SearchBarContainer>
   );

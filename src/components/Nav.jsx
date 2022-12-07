@@ -12,11 +12,10 @@ const NavContainer= styled.div`
    height: 30px;
 `
 
-export default function Nav () {
+export default function Nav (props) {
   return(
     <NavContainer>
-      <SearchBar></SearchBar>
+      <SearchBar onSearch={props.onSearch}></SearchBar>
     </NavContainer>
-
   )
 }
