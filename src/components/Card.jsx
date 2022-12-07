@@ -32,7 +32,7 @@ export default function Card(props) {
   return (
     <DivCard>
       <ButtonContainer>
-        <BotonCerrar onClick={props.close} >X</BotonCerrar> 
+        <BotonCerrar onClick={props.onClose} >X</BotonCerrar> 
       </ButtonContainer>
       
       <h2> {props.name} </h2>

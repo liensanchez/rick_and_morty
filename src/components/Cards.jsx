@@ -6,15 +6,13 @@ const DivPersonajes = styled.div`
   display: flex;
 `
 
-const onClose = () => {
-  window.alert('Card Cerrada')
-}
 
 export default function Cards(props) {
   const { characters } = props;
   const personajes = characters.map(personaje =>  <Card
                                                       key={personaje.id}
-                                                      close ={onClose}
+                                                      //se crea y se asigna la propiedad ID cada vez q se crea una nueva card y la ejecutamos con ese id 
+                                                      onClose={() => props.onClose (personaje.id)}
                                                       name={personaje.name}
                                                       species={personaje.species}
                                                       gender={personaje.gender}
