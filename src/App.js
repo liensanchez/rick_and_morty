@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 function App () {
 
-  const [characters, setCharacters] = useState([]) //traemos de la base de datos un arreglo de objetos 
+  const [characters, setCharacters] = useState([]) //traemos de la base de datos un arreglo de objetos va vacio xq sino nos tira error
 
   const onSearch = (characterId) => {
     fetch(`https://rickandmortyapi.com/api/character/${characterId}`)
