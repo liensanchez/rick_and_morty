@@ -13,28 +13,28 @@ const DivCard = styled.div`
   padding: 10px;
   text-align: center;
 `
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+`
+
+
 const BotonCerrar = styled.button`
-/*  --green: #1BFD9C;
- font-size: 15px;
- padding: 0.7em 2.7em;
- letter-spacing: 0.06em;
- position: relative;
- font-family: inherit;
- border-radius: 0.6em;
- overflow: hidden;
- transition: all 0.3s;
- line-height: 1.4em;
- border: 2px solid var(--green);
- background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
- color: var(--green);
- box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
- */
+  border: 2px solid ;
+  background-color: #1BFD9C;
+  display: flex;
+  flex-direction: row-reverse;
+ 
 `
 
 export default function Card(props) {
   return (
     <DivCard>
-      <BotonCerrar  onClick={props.onClose} >X</BotonCerrar>
+      <ButtonContainer>
+        <BotonCerrar onClick={props.close} >X</BotonCerrar> 
+      </ButtonContainer>
+      
       <h2> {props.name} </h2>
       <img src={props.image} alt=""/> 
       <h2> {props.species} </h2>

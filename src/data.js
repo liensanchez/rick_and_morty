@@ -3,19 +3,22 @@ const characters = [
     name: 'Morty Smith',
     species: 'Human',
     gender: 'Male',
-    image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'
+    image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
+    id:1
   },
   {
     name: 'Summer Smith',
     species: 'Human',
     gender: 'Female',
-    image: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg'
+    image: 'https://rickandmortyapi.com/api/character/avatar/3.jpeg',
+    id:2
   },
   {
     name: 'Beth Smith',
     species: 'Human',
     gender: 'Female',
-    image: 'https://rickandmortyapi.com/api/character/avatar/4.jpeg'
+    image: 'https://rickandmortyapi.com/api/character/avatar/4.jpeg',
+    id:3
   }
 ]
 
