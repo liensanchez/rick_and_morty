@@ -1,19 +1,16 @@
 import styled from 'styled-components'
 
-const InputContainer= styled.div`
-   display: flex;
-   flex-direction: row-reverse;
-   background-color: #1BFD9C;
-   position:fixed;
-   width:100%;
-   z-index: 1;
+const SearchBarContainer= styled.div`
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-right: 10px;
 `
 
 export default function SearchBar(props) {
-   return (
-      <InputContainer>
-         <button  onClick={props.onSearch} >Agregar</button> 
-         <input type='search' />
-      </InputContainer>
-   );
+  return (
+    <SearchBarContainer>
+      <input type='search' />
+      <button  onClick={props.onSearch}> Agregar </button> 
+    </SearchBarContainer>
+  );
 }

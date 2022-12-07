@@ -1,32 +1,29 @@
 import './App.css'
-import Card from './components/Card.jsx'
 import Cards from './components/Cards.jsx'
 import Nav from './components/Nav'
-import characters, { Rick } from './data.js'
-
-
-
-
+import { useState } from 'react'
 
 
 function App () {
+
+  const [characters, setCharacters] = useState({
+    characterName : ''
+  })
+
+  const onSearch = (e) => {
+
+    setCharacters({
+      ...characters,
+    })
+  }
+
+
+
   return (
     <>
-    <Nav>
-      
+    <Nav onSearch={onSearch}>
     </Nav>
-    <div className='App' style={{ padding: '25px' }}>
-      
-{/*       <div>
-        <Card
-          name={Rick.name}
-          species={Rick.species}
-          gender={Rick.gender}
-          image={Rick.image}
-          onClose={() => window.alert('Emulamos que se cierra la card')}
-        /> 
-      </div> */}
-      
+    <div className='App' style={{ padding: '25px' }}>   
       <div>
         <Cards
           characters={characters}
