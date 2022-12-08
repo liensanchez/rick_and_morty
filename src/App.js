@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import About from './components/About'
 import { useState } from 'react'
 import {Routes, Route} from "react-router-dom";
+import Detail from './components/Detail'
 
 
 function App () {
@@ -42,7 +43,8 @@ function App () {
     <Nav onSearch={onSearch} /> {/* VA ASI PRIMERO PORQUE ES LA RUTA FUENTE */}
       <Routes>
         <Route exact path='/' element={<Home onClose={onClose} characters={characters} />}/>
-        <Route exact path='/about' element={<About />}/> {/* TAMBIEN PUEDE SER ELEMENTE DEPENDDE DE LA VERSION DE REACT ROUTER DOM Q SE UTILICE */}
+        <Route path='/about' element={<About />}/> {/* TAMBIEN PUEDE SER ELEMENTE DEPENDDE DE LA VERSION DE REACT ROUTER DOM Q SE UTILICE */}
+        <Route path='/detail/:id' element={<Detail />}/> 
       </Routes>
     </>
   )

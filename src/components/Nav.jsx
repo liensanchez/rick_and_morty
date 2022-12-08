@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import SearchBar from './SearchBar'
-import {BrowserRouter, Router, Link, Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 const NavContainer= styled.div`
@@ -19,7 +19,5 @@ export default function Nav (props) {
       <Link to='/'><button>home</button></Link>
       <SearchBar onSearch={props.onSearch}></SearchBar>
     </NavContainer>
-
-
   )
 }

@@ -20,7 +20,7 @@ export default function SearchBar(props) {
 
   return (
     <SearchBarContainer>
-      <input type='search' name='search' onChange={handleChange} />
+      <input type='search' name='search' onChange={handleChange} placeholder='ingresa un numero'/>
         {/* props.onSearch con id porque es lo q vamos a utilizar para filtrar  */}
 
         {/*tiene q ser llamada asi, xq sino se ejecuta multiple */}
