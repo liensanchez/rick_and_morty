@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import SearchBar from './SearchBar'
+import {Router, Link, Route} from "react-router-dom";
 
 
 const NavContainer= styled.div`
@@ -15,8 +16,16 @@ const NavContainer= styled.div`
 
 export default function Nav (props) {
   return(
-    <NavContainer>
-      <SearchBar onSearch={props.onSearch}></SearchBar>
-    </NavContainer>
+    <Router>
+      <Route>
+        <NavContainer>
+        <Link to="/about"><button>About</button></Link>
+          <button>home</button>
+          <SearchBar onSearch={props.onSearch}></SearchBar>
+        </NavContainer>
+      </Route>
+    </Router>
+
+
   )
 }

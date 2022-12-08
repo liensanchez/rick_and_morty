@@ -1,7 +1,9 @@
 import './App.css'
 import Cards from './components/Cards.jsx'
 import Nav from './components/Nav'
+import About from './components/About'
 import { useState } from 'react'
+import {Router, Switch, Route} from "react-router-dom";
 
 
 
@@ -34,17 +36,25 @@ function App () {
 
   return (
     <>
-    <Nav onSearch={onSearch}>
-    </Nav>
-    <div className='App' style={{ padding: '25px' }}>   
+
+    <Nav onSearch={onSearch} />
+
+    <Router>
+      <Switch>
+         <Route path='/about' > <About/></Route>
+      </Switch>
+    </Router>
+{/*     <div className='App' style={{ padding: '25px' }}>   
       <div>
          <Cards
           onClose={onClose}
           characters={characters}
         /> 
       </div>
-    </div>
-    </>
+    </div> */}
+    </> 
+   
+
 
   )
 }
