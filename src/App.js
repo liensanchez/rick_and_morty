@@ -1,10 +1,10 @@
 import './App.css'
+import Home from './components/Home'
 import Cards from './components/Cards.jsx'
 import Nav from './components/Nav'
 import About from './components/About'
 import { useState } from 'react'
-import {Router, Switch, Route} from "react-router-dom";
-
+import {BrowserRouter, Router, Link, Route} from "react-router-dom";
 
 
 function App () {
@@ -36,26 +36,22 @@ function App () {
 
   return (
     <>
-
     <Nav onSearch={onSearch} />
+      <Route exact path='/' component={Home}/>
+      <Route exact path='/about' component={About}/> {/* TAMBIEN PUEDE SER ELEMENTE DEPENDDE DE LA VERSION DE REACT ROUTER DOM Q SE UTILICE */}
+    </>
 
-    <Router>
-      <Switch>
-         <Route path='/about' > <About/></Route>
-      </Switch>
-    </Router>
-{/*     <div className='App' style={{ padding: '25px' }}>   
+/*     <>
+    
+     <div className='App' style={{ padding: '25px' }}>   
       <div>
          <Cards
           onClose={onClose}
           characters={characters}
         /> 
       </div>
-    </div> */}
-    </> 
-   
-
-
+    </div> 
+    </>  */
   )
 }
 
