@@ -108,11 +108,6 @@ export default function Form (props) {
  const handleSubmit =  ((e) => {
     e.preventDefault() 
     props.login(user)
-/*     if (Object.keys(error).length === 0){
-      return window.alert('Datos completos')
-    } else {
-      return window.alert('Debes corregir los errores')
-    } */
   })
 
   return (
