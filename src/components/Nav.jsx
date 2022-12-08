@@ -9,7 +9,7 @@ const NavContainer= styled.div`
    flex-direction: row-reverse;
    background-color: #1BFD9C;
    width:100%;
-   height: 30px;
+
 `
 
 export default function Nav (props) {
