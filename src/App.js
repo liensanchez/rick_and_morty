@@ -1,6 +1,5 @@
 import './App.css'
 import Home from './components/Home'
-import Cards from './components/Cards.jsx'
 import Nav from './components/Nav'
 import About from './components/About'
 import { useState } from 'react'
@@ -9,8 +8,12 @@ import {BrowserRouter, Router, Link, Route} from "react-router-dom";
 
 function App () {
 
+
+
   const [characters, setCharacters] = useState([]) //traemos de la base de datos un arreglo de objetos va vacio xq sino nos tira error
 
+
+    //funcion de busqueda
   const onSearch = (characterId) => {
     fetch(`https://rickandmortyapi.com/api/character/${characterId}`)
       //parseamos
@@ -36,7 +39,7 @@ function App () {
 
   return (
     <>
-    <Nav onSearch={onSearch} />
+    <Nav onSearch={onSearch} /> {/* VA ASI PRIMERO PORQUE ES LA RUTA FUENTE */}
       <Route exact path='/' component={Home}/>
       <Route exact path='/about' component={About}/> {/* TAMBIEN PUEDE SER ELEMENTE DEPENDDE DE LA VERSION DE REACT ROUTER DOM Q SE UTILICE */}
     </>
@@ -44,6 +47,7 @@ function App () {
 /*     <>
     
      <div className='App' style={{ padding: '25px' }}>   
+
       <div>
          <Cards
           onClose={onClose}
