@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 
 
@@ -26,6 +27,18 @@ const ImageContainer = styled.div`
 
 const InfoContainer = styled.div`
   margin-top: 100px;
+`
+
+const BotonVolver = styled.button`
+  height: 2em;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #0fd850;
 `
 
 
@@ -56,6 +69,7 @@ export default function Detail () {
 
  return(
   <DetailContainer>
+    <Link to='/home'><BotonVolver> Volver</BotonVolver></Link>
     <ImageContainer>
       <img src={characterDetail.image} alt="" />
     </ImageContainer> 

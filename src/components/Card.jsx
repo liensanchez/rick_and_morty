@@ -24,7 +24,7 @@ const ButtonContainer = styled.div`
 
 const BotonCerrar = styled.button`
   border: 2px solid ;
-  background-color: #1BFD9C;
+  background-color: #0fd850;
   display: flex;
   flex-direction: row-reverse;
 `
