@@ -27,7 +27,19 @@ const BotonCerrar = styled.button`
   background-color: #1BFD9C;
   display: flex;
   flex-direction: row-reverse;
- 
+`
+
+const BotonMasInfo = styled.button `
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #0fd850;
 `
 
 export default function Card(props) {
@@ -36,13 +48,12 @@ export default function Card(props) {
       <ButtonContainer>
         <BotonCerrar onClick={props.onClose} >X</BotonCerrar> 
       </ButtonContainer>
-    
-      <Link to={`/detail/` + props.id} >
-        <h2> {props.name} </h2>
-      </Link>
+      <h2>{props.name}</h2>
       <img src={props.image} alt=""/> 
       <h2> {props.species} </h2>
-      <h2> {props.gender} </h2>
+      <Link to={`/detail/` + props.id} >
+        <BotonMasInfo>Mas informacion</BotonMasInfo>
+      </Link>
     </DivCard>
     );
 }

@@ -5,11 +5,14 @@ import {Link} from "react-router-dom";
 
 
 const NavContainer = styled.div`
+   width:100%;
+`
+
+
+const NavBar = styled.div`
    display: flex;
    flex-direction: row-reverse;
    background-color: #1BFD9C;
-   width:100%;
-
 `
 
 const ButtonContainer = styled.div `
@@ -19,14 +22,16 @@ const ButtonContainer = styled.div `
 export default function Nav (props) {
   return(
     <NavContainer>
-      <ButtonContainer>
-        <Link to='/about'><button>About</button></Link>
-      </ButtonContainer>
-      <ButtonContainer>
-        <Link to='/home'><button>home</button></Link>
-      </ButtonContainer>
+      <NavBar>
+        <ButtonContainer>
+          <Link to='/about'><button>About</button></Link>
+        </ButtonContainer>
+        <ButtonContainer>
+          <Link to='/home'><button>home</button></Link>
+        </ButtonContainer>
 
-      <SearchBar onSearch={props.onSearch}></SearchBar>
+        <SearchBar onSearch={props.onSearch}></SearchBar>
+      </NavBar>
     </NavContainer>
   )
 }
