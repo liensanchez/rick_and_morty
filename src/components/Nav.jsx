@@ -23,7 +23,7 @@ export default function Nav (props) {
         <Link to='/about'><button>About</button></Link>
       </ButtonContainer>
       <ButtonContainer>
-        <Link to='/'><button>home</button></Link>
+        <Link to='/home'><button>home</button></Link>
       </ButtonContainer>
 
       <SearchBar onSearch={props.onSearch}></SearchBar>

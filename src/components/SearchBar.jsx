@@ -10,6 +10,10 @@ const SearchBarContainer= styled.div`
 
 export default function SearchBar(props) {
 
+  //variables para numero random
+  let max = 826
+  let random = Math.floor(Math.random()*max)
+
 
     //seteamos el id q luego vamos a utilizar para la busqueda
   const [id, setId] = useState('')
@@ -25,6 +29,7 @@ export default function SearchBar(props) {
 
         {/*tiene q ser llamada asi, xq sino se ejecuta multiple */}
       <button onClick={() => props.onSearch(id)}> Agregar </button> 
+      <button onClick={() => props.onSearch(random)}>Random</button>
     </SearchBarContainer>
   );
 }
